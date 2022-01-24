@@ -16,7 +16,7 @@ Functional
 Persist the data to support this screen when device is offline
 
 ## How to run backend
-Download server repo https://github.com/itznikhil/moneymovementview-server
+Download server repo https://github.com/itznikhil/moneymovementsview-server
 change directory over the same
 run test_app.py 
 ## how to run frontend
