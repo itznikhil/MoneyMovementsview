@@ -30,7 +30,7 @@ const getAllTransactions = (
         ...state,
         apiCalling: false,
         apiCallSuccess: true,
-        transactionInfo: payload.transactionInfo.transactionInfo,
+        transactionInfo: payload,
         apiCallError: false,
       };
 

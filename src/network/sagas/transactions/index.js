@@ -21,11 +21,11 @@ function getTransactionsListAPI(action) {
 function* getTransactionsList(action) {
   try {
     const response = yield call(getTransactionsListAPI, action);
+
     if (response.status === responseCode.API_RESPONSE_SUCCESS) {
-      const {data = {}} = response;
       yield put({
         type: TRANSACTIONS_SUCCESS,
-        payload: {transactionInfo: data},
+        payload: {transactionInfo: response.data},
       });
     } else {
       yield put({

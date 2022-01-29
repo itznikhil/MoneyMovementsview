@@ -23,14 +23,13 @@ class Transactions extends Component {
   }
   static getDerivedStateFromProps(props, state) {
     if (props.apiCallSuccess) {
-      // console.warn('api call success');
       return {
-        transactions: props.transactionInfo,
+        transactions: props.transactionInfo.transactionInfo,
       };
     }
-    if (props.transactionInfo !== state.transactions) {
+    if (props.transactionInfo.transactionInfo !== state.transactions) {
       return {
-        transactions: props.transactionInfo,
+        transactions: props.transactionInfo.transactionInfo,
       };
     }
     return null;
